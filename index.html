@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+    <script>
+        /*---------------------------------- EXO 1 ---------------------*/
+        
+        const texte = "Notre formation DL commence aujourd'hui"
+        console.log("La chaine de charactères contient " + texte.length + " lettres.")
+
+        /*----------------------------------EXO 2-------------------------*/
+
+        const exo2 ="Notre formation DL commence aujourd'hui"
+        let mots = (exo2.split(/\s/).length)
+        console.dir("La chaine de charactères contient "+mots+ " mots.")
+        
+        /*----------------------------------EXO 3-------------------------*/
+
+        let exo3 ="Notre formation DL commence aujourd'hui"
+        let demain = exo3.replace("aujourd'hui", "demain")
+        console.log(demain)
+        /*----------------------------------EXO 4------------------------*/
+        
+        function reverse(str){
+            let rev_str = ""
+            for(let i = str.length; i > 0; i--){
+                rev_str+= str[i-1]
+            } 
+            return rev_str
+        }
+
+        function isPalindrome(str){   
+            let reverse_str = reverse(str)
+            return reverse_str === str
+        }
+
+        let test = "Engage le jeu que je le gagne"
+        let espace = test.replace(/\s/g, "")
+        let maj = espace.toLowerCase(espace)
+
+        if(isPalindrome(maj)){
+            console.log(`La phrase ${test} est un palindrome`)
+        }
+        else{
+            console.log(`la phrase ${test} n'est pas un palindrome`)
+        }
+        
+
+        /*----------------------------------EXO 5------------------------*/
+
+        let franc = 100
+        let convert = 0.152449
+        let euro = franc*convert 
+        let arrondi = euro.toFixed(2)
+        console.log("montant en franc : "+franc+"")
+
+        console.log("montant en euro :"+arrondi+"€")
+
+        /*----------------------------------EXO 6------------------------*/
+
+        let article = 9.99
+        let quantite = 5
+        let TVA = 0.2
+        let prix = article*quantite*(TVA+1)
+        console.log("Prix unitaire de l'article : "+article+"€")
+        console.log("Quantité : "+quantite+"")
+        console.log("Taux de TVA "+TVA+"")
+        console.log("Le montant de la facture à régler est de : "+prix+"€")
+
+        /*----------------------------------EXO 7------------------------*/
+
+        let age = 10
+
+        var resultat
+        
+        if(age>=12)
+            resultat = "Cadet"
+        else if(age>=10)
+            resultat = "Minime"
+        else if(age>=8)
+            resultat = "Pupille"
+        else if(age>=6)
+            resultat = "Poussin"
+        else 
+            resultat = "N'appartient à aucune catégorie"
+            
+        console.log(resultat)
+
+        /*switch(true){
+            case (age>=12):
+                console.log("Cadet")
+                break;
+            case (age>=10):
+                console.log("Minime")
+                break;
+        } CEST COOL AUSSI*/
+
+        /*----------------------------------EXO 8------------------------*/
+
+        let number = 10
+            for(let i = 1; i <= 10; i++) {
+            const result = i * number
+        console.log(`${number} * ${i} = ${result}`)
+        }
+
+        /*----------------------------------EXO 9------------------------*/
+
+        let age2 = 17
+        let sexe = "H"
+        let resultat2
+        if(age2>=18 && age2 <= 35 && sexe == "F") 
+            resultat2 = "La personne est imposable"
+        else if(age2>=20  && sexe == "H")
+            resultat2= "la personne est imposable"
+        else
+            resultat2 = "la personne est non imposable" 
+        console.log(resultat2)
+        
+        /*----------------------------------EXO 10------------------------*/
+
+        let du = 152.91
+        let verse = 200
+        let reste = verse - du 
+        
+        let nbmonnaie
+        console.log(reste)
+        for(let valeur of [500,200,100,50,20,10,5,2,1,0.5,0.2,0.1,0.05,0.02,0.01]){
+            
+            let type = valeur >= 5 ? "billet" : "pièce"
+            let centime = "centime"
+            nbmonnaie = Math.floor(reste/valeur)
+
+            type+= nbmonnaie > 1 ? "s" : ""
+            centime += nbmonnaie > 1 ? "s" : ""
+
+            if (valeur > 1 && nbmonnaie > 0)
+                console.log(`${nbmonnaie} ${type} de ${valeur}€`)
+            else if (valeur < 1 && nbmonnaie > 0)
+                console.log(`${nbmonnaie} ${type} de ${valeur*100} ${centime} d'€`)
+            
+            reste = (reste-(nbmonnaie*valeur)).toFixed(2)
+            
+        }
+
+        // let reste1=Math.floor(reste/10)
+        // let reste2 =Math.floor((reste%10)/5)
+        // let reste3= Math.floor(((reste%10)%5)/2)
+        // let reste4= Math.floor((((reste%10)%5)%2)/1)
+        
+        //console.log(reste1+ "billets de 10€")
+        // console.log(reste2+ " billet de 5€")
+        // console.log(reste3+ " pièce de 2€")
+        // console.log(reste4+ " pièce de 1€")
+
+        /*----------------------------------EXO 12------------------------*/
+
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+         /*----------------------------------EXO 13------------------------*/
+        
+        let arraynotes = [10, 12, 8, 19, 3, 16, 11, 13, 9]
+        let noteslength
+        let summ
+        function ArrayAvg(arraynotes){  
+            let i = 0, summ = 0, noteslength = arraynotes.length
+            while (i < noteslength) {
+                 summ += arraynotes[i++]
+                
+        }
+            return (summ / noteslength).toFixed(2)
+        }
+        let moyenne = ArrayAvg(arraynotes)
+        console.log(moyenne)
+
+    </script>
